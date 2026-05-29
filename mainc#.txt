@@ -1,0 +1,31 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace RandomCityPicker
+{
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            PickRandomCity();
+            Console.ReadLine();
+        }
+
+        private static void PickRandomCity()
+        {
+            string[] cities = { "Istanbul", "Ankara", "Konya" };
+
+            // Generate random index and pick city
+            Random random = new Random();
+            int randomIndex = random.Next(3);
+
+            Console.WriteLine(cities[randomIndex]);
+        }
+    }
+
+}
